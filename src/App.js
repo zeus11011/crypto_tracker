@@ -21,32 +21,63 @@ function App() {
   }, [])
 
   return (
-    <div className="App flex flex-row bg-stone-800 p-10">
-      <table className="table-auto w-screen text-slate-300 rounded-2xl">
-        <thead className="text-lg bg-yellow-400 border-2 rounded">
-          <tr>
-            <th>Rank</th>
-            <th>symbol</th>
-            <th>Name</th>
-            <th>price</th>
-            <th>percentage</th>
-            <th>Market Cap</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-500">
-            {coins.map(e => {
-              
-              return <Coin name={e.name}
-              rank={e.market_cap_rank}
-              image={e.image}
-              cap={e.market_cap}
-              percentage={e.price_change_percentage_24h}
-              price={e.current_price}
-              />
+    <div className="Main-Container">
+      <div className="search">
+        <input type="text" />
+        <button onClick={()=> {console.log("clicked")}}>Search</button>
+      </div>
+      <div className="table">
+          <table className="table_container">
+            <thead className="thead">
+              <tr>
+                <th>Rank</th>
+                <th>symbol</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>percentage</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody className="">
+                {coins.map(e => {
+                  
+                  return <Coin name={e.name}
+                  rank={e.market_cap_rank}
+                  image={e.image}
+                  cap={e.market_cap}
+                  percentage={e.price_change_percentage_24h}
+                  price={e.current_price}
+                  />
 
-              })}
-      </tbody>
-      </table>
+                  })}
+          </tbody>
+          </table><table className="table_container">
+            <thead className="thead">
+              <tr>
+                <th>Rank</th>
+                <th>symbol</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>percentage</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody className="">
+                {coins.map(e => {
+                  
+                  return <Coin name={e.name}
+                  rank={e.market_cap_rank}
+                  image={e.image}
+                  cap={e.market_cap}
+                  percentage={e.price_change_percentage_24h}
+                  price={e.current_price}
+                  />
+
+                  })}
+          </tbody>
+          </table>
+      </div>
+      
     </div>
   );
 }

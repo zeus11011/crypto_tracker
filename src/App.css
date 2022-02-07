@@ -1,3 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.Main-Container{
+    display: flex;
+    align-items: center;
+    background-color: #41729F;
+    flex-direction: column;
+}
+
+
+.thead{
+    background-color: #274472;
+    margin: 10px;
+    
+}

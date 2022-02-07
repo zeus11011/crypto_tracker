@@ -4,9 +4,9 @@ function Coin({name,image, percentage , price,rank,cap}) {
 
     
     return (
-        <tr className="border-5 text-center  bg-stone-700 rounded-md text-stone-200">
+        <tr className="">
             <td className="">{rank}</td>
-            <td><img src={image} alt={name}className="max-h-10 m-auto"/></td>
+            <td><img src={image} alt={name}className=""/></td>
             <td>{name}</td>
             <td>{price}</td>
             <td>{percentage}%</td>
