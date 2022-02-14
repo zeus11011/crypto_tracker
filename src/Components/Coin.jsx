@@ -4,7 +4,7 @@ function Coin({name,image, percentage , price,rank,cap}) {
 
     
     return (
-        <tr className="">
+        <tr className="table_element" onClick={()=> console.log(name)}>
             <td className="">{rank}</td>
             <td><img src={image} alt={name}className=""/></td>
             <td>{name}</td>
@@ -15,4 +15,4 @@ function Coin({name,image, percentage , price,rank,cap}) {
     )
 }
 
-export default Coin
+export default Coin;
